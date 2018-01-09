@@ -1,0 +1,32 @@
+{application, etrd,
+ [{description, "An OTP application"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {mod, { etrd_app, []}},
+  {applications,
+   [kernel,
+    stdlib
+   ]},
+  {env,[
+    {binance_base_url, <<"https://api.binance.com/api/v1">>},
+    {binance_cred_ro, {
+      <<"">>,
+      <<"">>
+    }},
+    {binance_allowed_assets, [
+      <<"USDT">>,
+      <<"BNB">>,
+
+      <<"BTC">>,
+      <<"ETH">>,
+      <<"LTC">>,
+      <<"XMR">>,
+      <<"XPM">>
+    ]}
+  ]},
+  {modules, []},
+
+  {maintainers, []},
+  {licenses, ["Apache 2.0"]},
+  {links, []}
+ ]}.
